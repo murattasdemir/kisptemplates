@@ -1,0 +1,5 @@
+name:   KISP Simple (PDF)
+description: >
+ Template for simple LaTeX article without abstract and other fancy staff,
+ using R Markdown and the R bookdown package. LaTeX system must be
+ installed (MikTeX for Windows, MacTeX for Mac).

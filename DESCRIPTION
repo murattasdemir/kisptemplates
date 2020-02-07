@@ -1,0 +1,17 @@
+Package: kisptemplates
+Title: Provides R Markdown Templates
+Version: 0.0.1.0
+Authors@R: 
+    person(given = "Murat",
+           family = "Taşdemir",
+           role = c("aut", "cre"),
+           email = "murat.tasdemir@medeniyet.edu.tr",
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: kisp-templates provides templates for rmarkdown documents. Templates are for mostly scientific documents.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Imports: 
+    bookdown,
+    rmarkdown,
+    knitr

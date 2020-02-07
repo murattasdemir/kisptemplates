@@ -1,0 +1,90 @@
+---
+title: "Article Title^[This is the footnote about the article]"
+# `\emph` makes author names rm instead of italic. Use only for pdf output 
+author:
+    - First Author^[First Institution (corresponding author).]
+    - Second Author^[Second Institution.]
+date: "`r format(Sys.time(), '%d %B %Y')`"
+abstract: |
+    The abstract text here.
+keywords: "Inequality, education economics, logit"
+jelcodes: "E32, J23, J28"
+#notitleabstract: TRUE
+toc: false
+output:
+  bookdown::pdf_document2:
+    template: kisp_article_pdf.latex
+    latex_engine: xelatex
+    fig_caption: yes
+    keep_tex: true
+      
+header-includes: 
+  - \usepackage{booktabs}
+  - \usepackage{caption}
+  - \usepackage{setspace}
+  - \usepackage{float}
+  - \doublespacing
+#  - \singlespacing
+#  - \onehalfspacing
+  - \raggedbottom
+  - \setlength{\parskip}{0pt}
+indent: true
+classoption: "fleqn"
+link-citations: yes
+linkcolor: blue
+fontsize: 11pt
+geometry: margin=3cm 
+linestretch: '1.2'
+mainfont: Palatino
+
+bibliography: "article.bib"
+csl: apa.csl
+biblio-style: apalike
+nocite: |
+...
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+options(knitr.graphics.auto_pdf = TRUE)
+knitr::opts_chunk$set(fig.pos = 'H')
+```
+<!-- DOCUMENT STARTS HERE  --------------------- -->
+# Introduction {#intro}
+
+This is the introduction section. Cite resources such as @maddala83
+
+# Sample image
+
+```{r balance, out.width = "60%", fig.align = "center", fig.cap='Matching Balance', echo=FALSE}
+knitr::include_graphics("figures/ps_balance_en.pdf")
+```
+
+Reference to this figure as Figure \@ref(fig:balance).
+
+<!-- END OF DOCUMENT  -------------------------- -->
+
+<!-- DO NOT CHANGE THIS PART  ------------------ -->
+\newpage
+
+# References {-}
+
+\begingroup
+\setlength{\parindent}{-0.25in}
+\setlength{\leftskip}{0.25in}
+\setlength{\parskip}{8pt}
+\noindent
+<div id = "refs"></div>
+\endgroup
+
+\newpage
+# (APPENDIX) Appendix {-}
+<!-- ---------------------------------------- -->
+# Appendix {-}
+
+
+
+
+
+
+
+

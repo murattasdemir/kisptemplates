@@ -1,0 +1,3 @@
+name:   KISP Article (PDF)
+description: >
+ Template for simple LaTeX article using R Markdown and the R bookdown package. LaTeX system must be installed (MikTeX for Windows, MacTeX for Mac).

@@ -1,0 +1,63 @@
+---
+title: Presentation Title
+subtitle: A Subtitle
+author:
+    - First Author$^1$
+    - Second Author$^2$
+# Short author for footline
+short-author: "First Author &  Second Author"
+institute: 
+    - $^1$First Inst
+    - $^2$Second Inst
+short-inst: ""
+date: "`r format(Sys.time(), '%d %B %Y')`"
+fontsize: 12pt
+output: 
+  beamer_presentation: 
+    colortheme: default
+    fig_caption: yes
+    fonttheme: default
+    incremental: yes
+    keep_tex: yes
+    theme: CambridgeUS
+    toc: no
+    template: sunu.beamer
+    #includes:
+    #  in_header: header.tex
+    #  before_body: doc_prefix.tex
+    #  after_body: doc_suffix.tex
+classoption: ["fleqn","aspectratio=169"]
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## R Markdown
+
+This is an R Markdown presentation. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document.
+
+## Slide with Bullets
+
+- Bullet 1
+- Bullet 2
+- Bullet 3
+
+## Slide with R Output
+
+```{r cars, echo = TRUE}
+summary(cars)
+```
+
+## Slide with equation
+
+$$ \int_{i=0}^{\infty}\frac{\partial Y}{\partial \alpha}\left[ x^2+w\right]d\alpha=0$$
+
+## Slide with Plot
+
+```{r pressure}
+plot(pressure)
+```
+

@@ -1,0 +1,3 @@
+name:   KISP Beamer Slides (PDF)
+description: >
+ Template for simple Beamer presentation using R Markdown and the R bookdown package. LaTeX system must be installed (MikTeX for Windows, MacTeX for Mac).

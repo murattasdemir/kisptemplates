@@ -1,0 +1,13 @@
+.Rproj.user
+*.Rproj
+.Rbuildignore
+.Rhistory
+.RData
+.Ruserdata
+packrat/lib*/
+packrat/src/
+*.log
+*.out
+*.aux
+*.spl
+
