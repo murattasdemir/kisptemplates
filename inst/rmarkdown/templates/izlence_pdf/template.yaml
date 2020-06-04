@@ -1,0 +1,5 @@
+name:   KISP İzlence (PDF)
+description: >
+ Template for a course syllabus in Turkish, using R Markdown and the R bookdown package.
+ LaTeX system must be installed (MikTeX for Windows, MacTeX for Mac). Another option is to
+ use `tinytex` package.

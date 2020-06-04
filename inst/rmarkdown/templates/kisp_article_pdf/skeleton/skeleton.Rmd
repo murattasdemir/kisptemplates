@@ -16,13 +16,17 @@ output:
     template: kisp_article_pdf.latex
     latex_engine: xelatex
     fig_caption: yes
-    keep_tex: true
+    keep_tex: false
       
 header-includes: 
+  - \usepackage{polyglossia}
+  #- \setdefaultlanguage{turkish}
+  - \setdefaultlanguage{english}
   - \usepackage{booktabs}
   - \usepackage{caption}
   - \usepackage{setspace}
   - \usepackage{float}
+  - \usepackage{multirow}
   - \doublespacing
 #  - \singlespacing
 #  - \onehalfspacing

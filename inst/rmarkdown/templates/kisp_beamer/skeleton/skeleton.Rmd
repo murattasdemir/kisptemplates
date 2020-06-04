@@ -17,16 +17,32 @@ output:
     colortheme: default
     fig_caption: yes
     fonttheme: default
-    incremental: yes
+    incremental: no
     keep_tex: yes
     theme: CambridgeUS
     toc: no
+    latex_engine: xelatex
     template: sunu.beamer
     #includes:
     #  in_header: header.tex
     #  before_body: doc_prefix.tex
     #  after_body: doc_suffix.tex
 classoption: ["fleqn","aspectratio=169"]
+header-includes:
+  - \usepackage{polyglossia}
+  - \setdefaultlanguage{turkish}
+  - \usepackage{booktabs}
+  - \usepackage{caption}
+  - \usepackage{amsmath}
+  - \usepackage{setspace}
+  - \usepackage{float}
+  - \usepackage{multirow}
+  - \AtBeginSection{}
+  - \newcommand*\rot{\rotatebox{90}} 
+  # Below two commands are to spread out list items in slides vertically
+  - \let\olditem\item
+  - \renewcommand{\item}{\olditem\vspace{\fill}}  
+
 ---
 
 ```{r setup, include=FALSE}
