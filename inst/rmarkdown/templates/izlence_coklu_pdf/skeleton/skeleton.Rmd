@@ -1,0 +1,133 @@
+---
+output: 
+  bookdown::pdf_document2:
+    keep_tex: true
+    fig_caption: yes
+    latex_engine: pdflatex
+    template: syllabus_tr.latex
+    number_sections: true
+geometry: margin=1in
+link-citations: yes
+linkcolor: blue
+
+title: "İKT XXX Makro İktisat Teorisi"
+author: "Murat Taşdemir"
+date: "2020 Bahar"
+
+email: "murat.tasdemir@medeniyet.edu.tr"
+web: "murattasdemir.com"
+officehours: "Pts 14:20-17:20"
+office: "Güney Yerleşkesi, B Blok 209"
+classroom: "B2018"
+classhours: "Pts 14:20-17:20"
+
+#Uncomment following if there is a teaching assistant
+#assistant: "Name Surname" 
+#email_ta: "xxxxxx@gmail.com"
+#office_ta: "B249"
+
+
+fontfamily: mathpazo
+fontsize: 11pt
+header-includes:
+   - \linespread{1.05}
+bibliography: "syllabus.bib"
+csl: apa-tr.csl
+biblio-style: apalike
+
+---
+
+```{r setup, include=FALSE, cache=F, message=F, warning=F, results="hide"}
+knitr::opts_chunk$set(cache=TRUE)
+knitr::opts_chunk$set(fig.path='figs/')
+knitr::opts_chunk$set(cache.path='_cache/')
+knitr::opts_chunk$set(warning=F, message=F)
+# knitr::opts_knit$get(kable.force.latex = TRUE)
+```
+
+
+
+```{r dates_bib, include=FALSE}
+knitr::opts_chunk$set(cache=FALSE, dev='pdf')
+#The class meets twice a week. Enter the first and the second class meeting days in the first week
+firstday <- "2020-02-12" #First class in the first week
+secday <- "2020-02-14" #First class in the first week
+tweek <- 15 #Total number of weeks in semester
+
+meeting1 <- as.Date(firstday) + c(0:tweek) * 7
+meeting2 <- as.Date(secday) + c(0:tweek) * 7
+hafta <- paste0(1:tweek,". Hafta", ", "," ", format(meeting1,format="%d/%m")," ve ",
+                format(meeting2,format="%d/%m")," " )
+
+
+#References 
+library(RefManageR)
+# library(knitcitations)
+# library(rcrossref)
+bib <- ReadBib("syllabus.bib")
+myopts <- BibOptions(bib.style = "authoryear", style="latex", first.inits=FALSE, max.names = 20)
+
+```
+
+# Dersin Tanımı
+
+# Dersin Amacı
+
+
+# Temel Kaynaklar
+
+Kaynaklar:
+
+```{r, echo = FALSE, results="asis"} 
+bib["maddala83", "heckman78"]
+``` 
+
+Atıfları şu şekilde yapabilirsiniz  [@heckman78] 
+
+# Ders Kuralları
+
+I will detail the policy for this course below. Basically, don't cheat and try to learn stuff. Don't be that guy.
+
+## Değerlendirme
+
+
+## Derse Devam
+
+
+> *Showing up is 80 percent of life* -- Woody Allen, [via Marshall Brickman](http://quoteinvestigator.com/2013/06/10/showing-up/#note-6553-1)
+
+## İletişim
+
+
+## Mazeret Sınavları
+
+
+## Akademik Etik
+
+
+## Engellilik Durumu
+
+
+\newpage
+
+# Ders Planı
+
+
+## `r hafta[1]`  
+ * Giriş ve ders izlencesine ilişkin hususlar
+ * Oligopol piyasaları ve stratejik davranış
+ * Lider-takipçi modeli
+
+## `r hafta[2]`
+ * Cournot rekabet modeli
+ * Fiyat liderliği
+ * Bertrand rekabet mdeli
+ * \textcolor{red}{\textbf{Cuma ders yok}} (Şehir dışındayım). PS için duyuru yapılacak
+
+## `r hafta[3]` 
+ * Karteller
+ * Oyun teorisine giriş
+ * Matris gösterimi ve ağaç gösterimi
+ * Nash dengesi
+
+# Kaynaklar

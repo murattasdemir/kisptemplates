@@ -1,0 +1,115 @@
+---
+output: 
+  bookdown::pdf_document2:
+    keep_tex: true
+    fig_caption: yes
+    latex_engine: pdflatex
+    template: syllabus_tr.latex
+    number_sections: true
+geometry: margin=1in
+link-citations: yes
+linkcolor: blue
+
+title: "İKT XXX Makro İktisat Teorisi"
+author: "Murat Taşdemir"
+date: "2020 Bahar"
+
+email: "murat.tasdemir@medeniyet.edu.tr"
+web: "murattasdemir.com"
+officehours: "Pts 14:20-17:20"
+office: "Güney Yerleşkesi, B Blok 209"
+classroom: "B2018"
+classhours: "Pts 14:20-17:20"
+
+#Uncomment following if there is a teaching assistant
+#assistant: "Name Surname" 
+#email_ta: "xxxxx@gmail.com"
+#office_ta: "B249"
+header-includes:
+   - \linespread{1.05}
+bibliography: "syllabus.bib"
+csl: apa-tr.csl
+biblio-style: apalike
+
+---
+
+```{r setup, include=FALSE, cache=F, message=F, warning=F, results="hide"}
+knitr::opts_chunk$set(cache=TRUE)
+knitr::opts_chunk$set(fig.path='figs/')
+knitr::opts_chunk$set(cache.path='_cache/')
+knitr::opts_chunk$set(warning=F, message=F)
+# knitr::opts_knit$get(kable.force.latex = TRUE)
+```
+
+
+
+```{r dates_bib, include=FALSE}
+knitr::opts_chunk$set(cache=FALSE, dev='pdf')
+#Modify below function to automatically generate weeks for weekly topics
+library(lubridate)
+firstday <- "2019-01-15" #Start date
+meetings <- ymd(firstday) + c(0:15) * weeks(1)
+hafta <- paste0(1:16,". Hafta", ", "," ", day(meetings)," ", months(meetings)," " )
+
+#References 
+library(RefManageR)
+# library(knitcitations)
+# library(rcrossref)
+bib <- ReadBib("syllabus.bib")
+myopts <- BibOptions(bib.style = "authoryear", style="latex", first.inits=FALSE, max.names = 20)
+
+```
+
+
+# Dersin Tanımı
+
+# Dersin Amacı
+
+
+# Temel Kaynaklar
+
+Kaynaklar:
+
+```{r, echo = FALSE, results="asis"} 
+bib["maddala83", "heckman78"]
+``` 
+
+Atıfları şu şekilde yapabiirsiniz [@heckman78] 
+
+# Ders Kuralları
+
+I will detail the policy for this course below. Basically, don't cheat and try to learn stuff. Don't be that guy.
+
+## Değerlendirme
+
+
+## Derse Devam
+
+
+> *Showing up is 80 percent of life* -- Woody Allen, [via Marshall Brickman](http://quoteinvestigator.com/2013/06/10/showing-up/#note-6553-1)
+
+## İletişim
+
+
+## Mazeret Sınavları
+
+
+## Akademik Etik
+
+
+## Engellilik Durumu
+
+
+\newpage
+
+# Ders Planı
+
+
+## `r hafta[1]` : Tanışma ve izlence.
+
+## `r hafta[2]`: Konu 1
+
+## `r hafta[12]`: Konu 2
+
+
+# Kaynaklar

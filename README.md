@@ -4,7 +4,7 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of __kisptemplates__ is to provide R markdown templates for scientific documents and presentations. They are customized for my own purpose and needs. 
+The goal of __kisptemplates__ is to provide R markdown templates for scientific documents and presentations. They are customized for my own purpose and needs. Modify as you needed.
 
 ## Installation
 

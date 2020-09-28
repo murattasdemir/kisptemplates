@@ -1,0 +1,125 @@
+---
+output: 
+  bookdown::pdf_document2:
+    keep_tex: true
+    fig_caption: yes
+    latex_engine: pdflatex
+    template: syllabus.latex
+    number_sections: true
+geometry: margin=1in
+link-citations: yes
+linkcolor: blue
+
+title: "ECON XXX Macroeconomics"
+author: "Murat Taşdemir"
+date: "2020 Fall"
+
+email: "xxxxxxx@xxxxx.edu.tr"
+web: "murattasdemir.com"
+officehours: "Mon 14:20-17:20"
+office: "Güney Yerleşkesi, B Blok 209"
+classroom: "B2018"
+classhours: "Mon 14:20-17:20"
+#Uncomment  following if there is a teaching assistant
+#assistant: "Name Surname" 
+#email_ta: "hameed@gmail.com"
+#office_ta: "B249"
+
+
+fontfamily: mathpazo
+fontsize: 11pt
+header-includes:
+   - \linespread{1.05}
+bibliography: "syllabus.bib"
+csl: apa.csl
+biblio-style: apalike
+
+---
+
+```{r setup, include=FALSE, cache=F, message=F, warning=F, results="hide"}
+knitr::opts_chunk$set(cache=TRUE)
+knitr::opts_chunk$set(fig.path='figs/')
+knitr::opts_chunk$set(cache.path='_cache/')
+knitr::opts_chunk$set(warning=F, message=F)
+# knitr::opts_knit$get(kable.force.latex = TRUE)
+```
+
+
+
+```{r dates_bib, include=FALSE}
+knitr::opts_chunk$set(cache=FALSE, dev='pdf')
+#Modify below function to automatically generate weeks for weekly topics
+library(lubridate)
+firstday <- "2019-01-15" #Start date
+meetings <- ymd(firstday) + c(0:15) * weeks(1)
+hafta <- paste0("Week", 1:16, ", "," ", day(meetings)," ", months(meetings)," " )
+
+#References 
+library(RefManageR)
+# library(knitcitations)
+# library(rcrossref)
+bib <- ReadBib("syllabus.bib")
+myopts <- BibOptions(bib.style = "authoryear", style="latex", first.inits=FALSE, max.names = 20)
+
+```
+
+# Course Description
+
+# Objectives
+
+# Readings
+
+References:
+
+```{r, echo = FALSE, results="asis"} 
+bib["maddala83", "heckman78"]
+``` 
+
+Cite references like this [@heckman78] 
+
+# Course Policy
+
+I will detail the policy for this course below. Basically, don't cheat and try to learn stuff. Don't be that guy.
+
+## Grading Policy
+
+
+## Attendance Policy
+
+
+> *Showing up is 80 percent of life* -- Woody Allen, [via Marshall Brickman](http://quoteinvestigator.com/2013/06/10/showing-up/#note-6553-1)
+
+
+
+## Late Arrival of the Professor Policy
+
+
+## E-mail Policy
+
+
+
+## Make-Up Exam Policy
+
+
+## Academic Dishonesty Policy
+
+
+## Disabilities Policy
+
+
+
+\newpage
+
+# Class Schedule
+
+Students must read the following before Tuesday's class session.  Important: class readings are subject to change, contingent on mitigating circumstances and the progress we make as a class.  Students are encouraged to attend lectures and check the course website for updates. 
+
+## `r hafta[1]` : Syllabus Day
+
+## `r hafta[2]`: Topic 1
+
+## `r hafta[12]`: Topic 2
+
+
+# References
+
