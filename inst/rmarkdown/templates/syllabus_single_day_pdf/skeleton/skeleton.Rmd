@@ -1,47 +1,43 @@
 ---
+title: "ECON 207 Microeconomics"
+subtitle: "İMÜ Economics"
+date: "2020 Fall"
+
+instructor: "Murat Taşdemir"
+email: "murat.tasdemir@medeniyet.edu.tr"
+web: "murattasdemir.com"
+officehours: "Pts 14:20-17:20"
+office: "Güney Yerleşkesi, B Blok 209"
+classroom: "Online Course"
+classhours: "Tue 9:00-11:30"
+
+#Uncomment following if there is a teaching assistant
+assistant: "Name Surname" 
+email_ta: "xxxxx@gmail.com"
+office_ta: "B249"
 output: 
   bookdown::pdf_document2:
-    keep_tex: true
+    keep_tex: false
+    toc: no
     fig_caption: yes
     latex_engine: pdflatex
-    template: syllabus.latex
-    number_sections: true
+    template: syllabus_en.latex
+    number_sections: false
 geometry: margin=1in
 link-citations: yes
 linkcolor: blue
-
-title: "ECON XXX Macroeconomics"
-author: "Murat Taşdemir"
-date: "2020 Fall"
-
-email: "xxxxxxx@xxxxx.edu.tr"
-web: "murattasdemir.com"
-officehours: "Mon 14:20-17:20"
-office: "Güney Yerleşkesi, B Blok 209"
-classroom: "B2018"
-classhours: "Mon 14:20-17:20"
-#Uncomment  following if there is a teaching assistant
-#assistant: "Name Surname" 
-#email_ta: "hameed@gmail.com"
-#office_ta: "B249"
-
-
-fontfamily: mathpazo
-fontsize: 11pt
-header-includes:
-   - \linespread{1.05}
 bibliography: "syllabus.bib"
 csl: apa.csl
 biblio-style: apalike
-
 ---
 
 ```{r setup, include=FALSE, cache=F, message=F, warning=F, results="hide"}
-knitr::opts_chunk$set(cache=TRUE)
+knitr::opts_chunk$set(cache=FALSE)
 knitr::opts_chunk$set(fig.path='figs/')
-knitr::opts_chunk$set(cache.path='_cache/')
+#knitr::opts_chunk$set(cache.path='_cache/')
 knitr::opts_chunk$set(warning=F, message=F)
 # knitr::opts_knit$get(kable.force.latex = TRUE)
+Sys.setlocale(category="LC_ALL", locale="en_US.UTF-8")
 ```
 
 
@@ -58,8 +54,8 @@ hafta <- paste0("Week", 1:16, ", "," ", day(meetings)," ", months(meetings)," " 
 library(RefManageR)
 # library(knitcitations)
 # library(rcrossref)
+BibOptions(bib.style = "authoryear", style="latex", first.inits=TRUE, max.names = 10)
 bib <- ReadBib("syllabus.bib")
-myopts <- BibOptions(bib.style = "authoryear", style="latex", first.inits=FALSE, max.names = 20)
 
 ```
 
@@ -106,20 +102,25 @@ I will detail the policy for this course below. Basically, don't cheat and try t
 
 ## Disabilities Policy
 
-
-
-\newpage
-
 # Class Schedule
 
-Students must read the following before Tuesday's class session.  Important: class readings are subject to change, contingent on mitigating circumstances and the progress we make as a class.  Students are encouraged to attend lectures and check the course website for updates. 
 
-## `r hafta[1]` : Syllabus Day
+## `r hafta[1]` {-}
 
-## `r hafta[2]`: Topic 1
+- Topic 1
+- Topic 2
 
-## `r hafta[12]`: Topic 2
+## `r hafta[2]`:{-}
 
+- Topic 3
+- Topic 4
+
+## `r hafta[3]`: {-}
+
+- Topic 5
+- Topic 6
+
+\newpage
 
 # References
 

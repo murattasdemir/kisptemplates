@@ -1,4 +1,4 @@
-name:   KISP İzlence Tekli Gün (PDF)
+name:   KISP İzlence -Tek Gün- (PDF)
 description: >
  Template for a course syllabus with a **single weekday** in Turkish, using R Markdown and the R bookdown package.
  LaTeX system must be installed (MikTeX for Windows, MacTeX for Mac). Another option is to

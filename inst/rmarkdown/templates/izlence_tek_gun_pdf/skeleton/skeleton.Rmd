@@ -1,44 +1,43 @@
 ---
-output: 
-  bookdown::pdf_document2:
-    keep_tex: true
-    fig_caption: yes
-    latex_engine: pdflatex
-    template: syllabus_tr.latex
-    number_sections: true
-geometry: margin=1in
-link-citations: yes
-linkcolor: blue
-
-title: "İKT XXX Makro İktisat Teorisi"
-author: "Murat Taşdemir"
+title: "İKT 207 Mikro İktisat"
+subtitle: "İMÜ İktisat Bölümü"
 date: "2020 Bahar"
 
+instructor: "Murat Taşdemir"
 email: "murat.tasdemir@medeniyet.edu.tr"
 web: "murattasdemir.com"
 officehours: "Pts 14:20-17:20"
 office: "Güney Yerleşkesi, B Blok 209"
-classroom: "B2018"
-classhours: "Pts 14:20-17:20"
+classroom: "Çevrimiçi Ders"
+classhours: "Sal 9:00-11:30"
 
 #Uncomment following if there is a teaching assistant
-#assistant: "Name Surname" 
-#email_ta: "xxxxx@gmail.com"
-#office_ta: "B249"
-header-includes:
-   - \linespread{1.05}
+assistant: "Name Surname" 
+email_ta: "xxxxx@gmail.com"
+office_ta: "B249"
+output: 
+  bookdown::pdf_document2:
+    keep_tex: false
+    toc: no
+    fig_caption: yes
+    latex_engine: pdflatex
+    template: syllabus_tr.latex
+    number_sections: false
+geometry: margin=1in
+link-citations: yes
+linkcolor: blue
 bibliography: "syllabus.bib"
 csl: apa-tr.csl
 biblio-style: apalike
-
 ---
 
 ```{r setup, include=FALSE, cache=F, message=F, warning=F, results="hide"}
-knitr::opts_chunk$set(cache=TRUE)
+knitr::opts_chunk$set(cache=FALSE)
 knitr::opts_chunk$set(fig.path='figs/')
-knitr::opts_chunk$set(cache.path='_cache/')
+#knitr::opts_chunk$set(cache.path='_cache/')
 knitr::opts_chunk$set(warning=F, message=F)
 # knitr::opts_knit$get(kable.force.latex = TRUE)
+Sys.setlocale(category="LC_ALL", locale="tr_TR.UTF-8")
 ```
 
 
@@ -55,8 +54,8 @@ hafta <- paste0(1:16,". Hafta", ", "," ", day(meetings)," ", months(meetings)," 
 library(RefManageR)
 # library(knitcitations)
 # library(rcrossref)
+BibOptions(bib.style = "authoryear", style="latex", first.inits=TRUE, max.names = 10)
 bib <- ReadBib("syllabus.bib")
-myopts <- BibOptions(bib.style = "authoryear", style="latex", first.inits=FALSE, max.names = 20)
 
 ```
 
@@ -97,19 +96,24 @@ I will detail the policy for this course below. Basically, don't cheat and try t
 ## Akademik Etik
 
 
-## Engellilik Durumu
-
-
-\newpage
-
 # Ders Planı
 
 
-## `r hafta[1]` : Tanışma ve izlence.
+## `r hafta[1]` {-}
 
-## `r hafta[2]`: Konu 1
+- Konu 1
+- Konu 2
 
-## `r hafta[12]`: Konu 2
+## `r hafta[2]` {-}
 
+- Konu 3
+- Konu 4
+
+## `r hafta[3]` {-}
+
+- Konu 5
+- Konu 6
+
+\newpage
 
 # Kaynaklar
